@@ -22,8 +22,8 @@ HTTP Method: POST
 Purpose: Logs the user out.
 Password Reset Routes:
 
-Routes: /password/reset, /password/email, /password/reset/{token}
-Controller Methods: ForgotPasswordController@showLinkRequestForm, ForgotPasswordController@sendResetLinkEmail, ResetPasswordController@showResetForm, ResetPasswordController@reset
+Routes: /password/reset , /password/reset/{token}
+Controller Methods: ResetPasswordController@reset
 HTTP Methods: GET and POST
 Purpose: Allows users to request and reset their passwords.
 

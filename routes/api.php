@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Api\ResetPasswordController;
 use App\Http\Controllers\Api\AuthController as ApiAuthController;
 
 /*
@@ -18,7 +19,10 @@ use App\Http\Controllers\Api\AuthController as ApiAuthController;
 
 Route::post('/login', [ApiAuthController ::class, 'login']);
 Route::post("/register", [ApiAuthController::class, 'register']);
-Route::post('/forgot', [ApiAuthController::class, 'forgotPassword']);
+
+Route::post('/password/reset', [ResetPasswordController::class, 'initiateReset'])->name('password.reset.initiate');
+Route::post('/password/reset/{token}', [ResetPasswordController::class, 'reset'])->name('password.reset');
+
 
 
 
