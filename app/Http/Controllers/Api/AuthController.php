@@ -22,10 +22,12 @@ class AuthController extends Controller
                 'email' => ['The provided credentials are incorrect.'],
             ]);
         }
+        
+        $token = $user->createToken($user->email);
 
         return response([
             "user" => $user,
-            "token" => $user->createToken($request->email)->plainTextToken
+            "token" => $token->plainTextToken
         ], 200);
 
     }
@@ -39,15 +41,20 @@ class AuthController extends Controller
             'password' => Hash::make('password')
         ]);
 
+        $token = $user->createToken($user->email);
+
         return response([
             'user' => $user,
-            'token' => $user->createToken($request->device_name)->plainTextToken
+            'token' => $token->plainTextToken
         ], 200);
     }
 
     public function logout(Request $request){
         auth()->logout();
         $request->user()->tokens()->delete();
+        return response([
+            'message' => "Successfully Logout"
+        ]);
     }
 
     public function forgotPassword(){

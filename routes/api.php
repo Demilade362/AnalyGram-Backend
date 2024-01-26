@@ -23,13 +23,12 @@ Route::post("/register", [ApiAuthController::class, 'register']);
 Route::post('/password/reset', [ResetPasswordController::class, 'initiateReset'])->name('password.reset.initiate');
 Route::post('/password/reset/{token}', [ResetPasswordController::class, 'reset'])->name('password.reset');
 
-
-
-
 Route::middleware('auth:sanctum')->group(function(){
     Route::post('logout', [ApiAuthController::class, 'logout']);
     
     Route::get('/user', function (Request $request) {
-        return $request->user();
+        return response([
+            "user" => $request->user()
+        ], 200);
     });
 });
