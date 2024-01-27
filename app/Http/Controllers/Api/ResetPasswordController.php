@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 // app/Http/Controllers/Api/ResetPasswordController.php
 
@@ -9,9 +9,11 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Password;
 
 class ResetPasswordController extends Controller
 {
+
     public function initiateReset(Request $request)
     {
         $request->validate([
@@ -19,26 +21,39 @@ class ResetPasswordController extends Controller
         ]);
 
         $token = Str::random(60);
-        
-        User::where('email', $request->email)->update(['reset_token' => $token]);
-        
-        return response()->json(['token' => $token, 'message' => 'Token generated successfully']);
-    }
-
-    public function reset(Request $request, $token)
-    {
-
-        $user = User::where('reset_token', $token)->first();
-
-        if (!$user) {
-            return response()->json(['message' => 'Invalid or expired token'], 422);
-        }
+        $user = User::where('email', $request->email)->first();
 
         $user->update([
-            'password' => Hash::make($request->password),
-            'reset_token' => null,
+            'remember_token' => $token
         ]);
-        
-        return response()->json(['message' => 'Password reset successfully']);
+
+        return $user ? response()->json(['token' => $token, 'message' => 'Token generated successfully']) : response()->json(["message" => "404 User Not Found"]);
+    }
+
+    public function reset(Request $request, string $token)
+    {
+        if ($token) {
+            $request->validate([
+                "token" => "required",
+                "password" => "required|min:8|confirmed",
+            ]);
+
+            $user = User::where('remember_token', $token)->first();
+
+            if (!$user) {
+                return response()->json(['message' => "Invalid or expired token"], 422);
+            }
+
+            $status = $user->update([
+                "password" => Hash::make($request->password),
+                "remember_token" => null
+            ]);
+
+            return $status ? response()->json([
+                'message' => 'Password reset successfully',
+            ]) : response()->json(['message' => "Password Failed to reset"]);
+        } else {
+            return response()->json(['message' => "Token Missing failed to reset password"]);
+        }
     }
 }
