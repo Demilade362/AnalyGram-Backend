@@ -3,7 +3,7 @@
 <td class="header">
 <a href="{{ $url }}" style="display: inline-block;">
 @if (trim($slot) === 'Laravel')
-<img src="https://laravel.com/img/notification-logo.png" class="logo" alt="Laravel Logo">
+<img src="https://drive.google.com/file/d/19Sm3kPbSKx8eXnZc7nwgaXA9oFRfMJ70/view?usp=sharing" class="logo" alt="Analygram Logo">
 @else
 {{ $slot }}
 @endif
