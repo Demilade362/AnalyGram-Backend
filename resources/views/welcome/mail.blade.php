@@ -1,5 +1,5 @@
 <x-mail::message>
-# Hello {{ $name }}, Thanks For Using Analygram
+# Thanks For Using Analygram
 
 Hi {{ $name }}, Thanks for creating an Account at Analygram.
 You are highly welcome to using our service
