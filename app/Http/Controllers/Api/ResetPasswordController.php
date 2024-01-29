@@ -5,10 +5,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Mail\ResetPassword;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Password;
 
 class ResetPasswordController extends Controller
@@ -26,6 +28,8 @@ class ResetPasswordController extends Controller
         $user->update([
             'remember_token' => $token
         ]);
+
+        Mail::to($user->email)->send(new ResetPassword($token));
 
         return $user ? response()->json(['token' => $token, 'message' => 'Token generated successfully']) : response()->json(["message" => "404 User Not Found"]);
     }

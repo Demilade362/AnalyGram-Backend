@@ -10,7 +10,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class WelcomeMail extends Mailable
+class ResetPassword extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -18,8 +18,9 @@ class WelcomeMail extends Mailable
      * Create a new message instance.
      */
     public function __construct(
-        protected string $name
-    ) {
+        public string $token
+    )
+    {
         //
     }
 
@@ -29,11 +30,11 @@ class WelcomeMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address('analygram1@gmail.com', 'Analygram Admin'),
+            from: new Address('analygram1@gmail.com', 'Analygram Support Team'),
             replyTo: [
-                new Address('analygram1@gmail.com', 'Analygram Admin'),
+                new Address('analygram1@gmail.com', 'Analygram Support Team'),
             ],
-            subject: 'Welcome Mail from Analygram',
+            subject: 'Reset Your Password',
         );
     }
 
@@ -42,10 +43,11 @@ class WelcomeMail extends Mailable
      */
     public function content(): Content
     {
+        $url = "https://www.analygram.com/reset/password/{$this->token}";
         return new Content(
-            markdown: 'mail.welcome',
+            markdown: 'mail.reset',
             with: [
-                "name" => $this->name
+                "url" => $url
             ]
         );
     }
