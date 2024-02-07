@@ -53,7 +53,7 @@
     </nav>
     <div class="container mt-5">
         <div class="row align-items-center justify-content-between">
-            <div class="col-6 text-body-secondary">
+            <div class="col-lg-6 text-body-secondary">
                 <h1>Unlock the power
                     <span>of data with</span> <span class="text-success">AnalyGram</span>
                 </h1>
@@ -61,7 +61,7 @@
                     Your go-to Instagram analytics tool for powerful insights. AnalyGram helps you understand your audience, optimize content, and boost engagement for a standout online presence.
                 </p>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6">
                 <img src="https://img.freepik.com/vecteurs-libre/illustration-concept-analyse-ludique_114360-7045.jpg?t=st=1706050301~exp=1706050901~hmac=41f83ab8b9da339e03745c32dea87af2dc6fab1a37af39de40e45289c5e6a981" alt="banner" class="img-fluid">
             </div>
         </div>
