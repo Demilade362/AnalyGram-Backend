@@ -72,29 +72,29 @@
     <div class="container mt-5">
         <h2 class="text-success text-center mb-5" style="margin: 8rem auto">Features</h2>
         <div class="row align-items-center justify-items-between mb-5">
-            <div class="col-lg-6">
+            <div class="col-lg-6 mb-4">
                 <img src="https://analygram-6d0a5.web.app/static/media/hero-screenshot-2.050139480ff5b49b4fba.png" class="img-fluid" alt="">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mb-4">
                 <h3>Real-Time Analytics</h3>
                 <p>Get instant access to real-time analytics and insights for your Instagram account.</p>
             </div>
         </div>
 
         <div class="row align-items-center justify-items-between mb-5">
-            <div class="col-md-6">
+            <div class="col-md-6 mb-4">
                 <h3>Engagement Metrics</h3>
                 <p>Track engagement metrics such as likes, comments, shares, and more to understand your audience better.</p>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 mb-4">
                 <img src="https://analygram-6d0a5.web.app/static/media/afordable.acf6adf8f08567e4c1537edb71b75dd2.svg" class="img-fluid" alt="">
             </div>
         </div>
         <div class="row align-items-center justify-items-between mb-5">
-            <div class="col-lg-6">
+            <div class="col-lg-6 mb-4">
                 <img src="https://analygram-6d0a5.web.app/static/media/8582996.5eec9d435ce8f34dc72f.jpg" class="img-fluid" alt="">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mb-4">
                 <h3>Content Optimization</h3>
                 <p>Optimize your content strategy based on data-driven insights to improve engagement and reach.</p>
             </div>
