@@ -26,8 +26,6 @@
             font-family: 'Poppins', sans-serif;
         }
     </style>
-
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 <body>
