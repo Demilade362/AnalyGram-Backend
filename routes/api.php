@@ -17,7 +17,7 @@ use App\Http\Controllers\Api\AuthController as ApiAuthController;
 |
 */
 
-Route::post('/login', [ApiAuthController ::class, 'login']);
+Route::post('/login', [ApiAuthController::class, 'login']);
 Route::post("/register", [ApiAuthController::class, 'register']);
 
 Route::post('/password/reset', [ResetPasswordController::class, 'initiateReset'])->name('password.reset.initiate');

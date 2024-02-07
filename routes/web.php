@@ -17,7 +17,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $token = Str::random(60);
-    Mail::to('ademolademilade362@gmail.com')->send(new ResetPassword($token));
     return view('welcome');
 });
