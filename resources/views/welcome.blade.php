@@ -45,7 +45,7 @@
                     </li>
                 </ul>
                 <div class="ms-auto">
-                    <a href="#" class="btn btn-light" type="submit">Admin Login</a>
+                    <a href="/login" class="btn btn-light" type="submit">Admin Login</a>
                 </div>
 
             </div>
