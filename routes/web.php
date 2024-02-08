@@ -1,8 +1,4 @@
 <?php
-
-use App\Mail\ResetPassword;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
