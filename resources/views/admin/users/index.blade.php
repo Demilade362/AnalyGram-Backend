@@ -15,20 +15,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                       @foreach($users as $user)
-                                <tr class="">
-                                    <td>{{ $user->name }}</td>
-                                    <td>{{ $user->email }}</td>
-                                    <td align="end">
-                                        <div class="d-flex-justify-content-between">
-                                            <a href="{{ route('user.destroy') }}" class="btn btn-danger btn-sm">
-                                                <i class="bi bi-trash"></i>
-                                                Suspend Account
-                                            </a>
-                                        </div>
-                                    </td>
-                                </tr>
-                       @endforeach
+                        @foreach($users as $user)
+                        <tr class="">
+                            <td>{{ $user->name }}</td>
+                            <td>{{ $user->email }}</td>
+                            <td align="end">
+                                <div class="d-flex-justify-content-between">
+                                    <form action="{{ route('user.destroy', $user->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger btn-sm">
+                                        <i class="bi bi-trash"></i>
+                                        Suspend Account
+                                        </button>
+                                </div>
+                            </td>
+                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
                 <a href="/admin/customers" class="btn btn-success">View All Customers
