@@ -5,7 +5,6 @@
     <div class="col-md-12">
         <div class="card border-0">
             <div class="card-body">
-                <h5 class="card-title">All Users</h5>
                 <table class="table">
                     <thead>
                         <tr>
