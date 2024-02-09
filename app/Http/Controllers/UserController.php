@@ -67,7 +67,7 @@ class UserController extends Controller
 
     public function allTrashed()
     {
-        $users = User::onlyTrashed()->get();
+        $users = User::onlyTrashed()->paginate(5);
         return view('admin.users.trashed', compact('users'));
     }
 
