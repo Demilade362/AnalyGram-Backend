@@ -59,7 +59,7 @@
                        @endforeach
                     </tbody>
                 </table>
-                <a href="/admin/customers" class="btn btn-success">View All Customers
+                <a href="{{ route('user.index') }}" class="btn btn-success">View All Users
                     <i class="bi bi-eye"></i>
                 </a>
             </div>
