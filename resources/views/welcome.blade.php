@@ -46,6 +46,11 @@
                         <a class="nav-link" aria-current="page" href="https://analygram-6d0a5.web.app/">Go to Main
                             Website</a>
                     </li>
+                    @auth
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
+                        </li>
+                    @endauth
                 </ul>
                 @auth
                     <div class="ms-auto">
