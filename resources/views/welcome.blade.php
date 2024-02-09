@@ -46,8 +46,8 @@
                         <a class="nav-link" aria-current="page" href="https://analygram-6d0a5.web.app/">Go to Main
                             Website</a>
                     </li>
-                    <div class="ms-auto">
-                        @auth
+                    @auth
+                        <div class="ms-auto">
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -66,13 +66,15 @@
                                     </form>
                                 </div>
                             </li>
+                        </div>
                     </ul>
                 @else
-                    <a href="/login" class="btn btn-light" type="submit">Admin Login</a>
+                    <div class="ms-auto">
+                        <a href="/login" class="btn btn-light" type="submit">Admin Login</a>
+                    </div>
                 @endauth
-            </div>
 
-        </div>
+            </div>
         </div>
     </nav>
     <div class="container mt-5">
