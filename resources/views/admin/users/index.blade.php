@@ -21,7 +21,7 @@
                                     <td>{{ $user->email }}</td>
                                     <td align="end">
                                         <div class="d-flex-justify-content-between">
-                                            <a href="/admin/customers" class="btn btn-danger btn-sm">
+                                            <a href="{{ route('user.destroy') }}" class="btn btn-danger btn-sm">
                                                 <i class="bi bi-trash"></i>
                                                 Suspend Account
                                             </a>

@@ -117,9 +117,15 @@
             <div class="offcanvas-body">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link
+                        <a class="nav-link active
                     " href="#">
                             <i class="bi bi-speedometer2"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user.index">
+                            <i class="bi
+                        bi-person"></i> Users
                         </a>
                     </li>
                 </ul>
@@ -144,7 +150,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="user.index">
                         <i class="bi
                         bi-person"></i> Users
                     </a>
@@ -167,8 +173,8 @@
                     </a>
                     <form id="logout-form" action="#" method="POST>
                         @csrf
-                        <button type="submit" class="btn btn-danger ms-2 rounded-circle shadow-sm">
-                            <i class="bi bi-box-arrow-right"></i>
+                        <button type=" submit" class="btn btn-danger ms-2 rounded-circle shadow-sm">
+                        <i class="bi bi-box-arrow-right"></i>
                         </button>
                     </form>
                 </div>
