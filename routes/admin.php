@@ -9,5 +9,5 @@ Route::get('dashboard', function (){
     $users = User::all();
     return view('admin.index', compact('users'));
 });
-Route::resource('user', UserController::class);
+Route::resource('user', UserController::class)->except(['create', 'store', 'edit', 'update'])->withTrashed();
 

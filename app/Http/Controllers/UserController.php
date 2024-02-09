@@ -12,7 +12,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        $users = User::all();
+        return view('admin.users.index', compact('users'));
     }
 
     /**
@@ -60,6 +61,24 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return redirect()->back()->with('msg', "User Account has been suspended");
+    }
+
+    public function allTrashed()
+    {
+        $users = User::onlyTrashed()->get();
+        return view();
+    }
+
+    public function restore(User $user)
+    {
+        $user->restore();
+        return redirect()->back()->with('msg', "User Account has be restored");
+    }
+
+    public function trashed(User $user){
+        $user->forceDelete();
+        return redirect()->back()->with('msg', 'User Account has been permanently Deleted');
     }
 }
