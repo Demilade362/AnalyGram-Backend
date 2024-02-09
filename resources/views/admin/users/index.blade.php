@@ -34,9 +34,6 @@
                         @endforeach
                     </tbody>
                 </table>
-                <a href="/admin/customers" class="btn btn-success">View All Customers
-                    <i class="bi bi-eye"></i>
-                </a>
             </div>
         </div>
     </div>
