@@ -145,7 +145,7 @@
             <ul class="nav flex-column">
                 <li class="nav-item">
                     <a class="nav-link {{ \Illuminate\Support\Facades\Route::is('dashboard') ? 'active' : '' }}"
-                    " href="#">
+                    " href="{{ route("dashboard") }}">
                         <i class="bi bi-speedometer2"></i> Dashboard
                     </a>
                 </li>
