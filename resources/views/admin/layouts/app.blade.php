@@ -110,7 +110,7 @@
     <div class="d-flex">
         <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" data-bs-scroll="true">
             <div class="offcanvas-header">
-                <h3 class="offcanvas-title"><a href="{{ route('home') }}" class="text-decoration-none text-dark">Analygram</a>
+                <h3 class="offcanvas-title"><a href="/" class="text-decoration-none text-dark">Analygram</a>
                 </h3>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
@@ -141,7 +141,7 @@
         </div>
 
         <div class="sidebar bg-success text-dark d-none d-lg-block shadow-sm">
-            <h3 class="sidebar-logo"><a href="#" class="text-decoration-none text-white">Analygram</a></h3>
+            <h3 class="sidebar-logo"><a href="/" class="text-decoration-none text-white">Analygram</a></h3>
             <ul class="nav flex-column">
                 <li class="nav-item">
                     <a class="nav-link active
