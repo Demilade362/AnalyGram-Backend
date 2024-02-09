@@ -31,7 +31,9 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-success navbar-dark">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="#">Analygram For Adminstrators</a>
@@ -41,33 +43,36 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="https://analygram-6d0a5.web.app/">Go to Main Website</a>
+                        <a class="nav-link" aria-current="page" href="https://analygram-6d0a5.web.app/">Go to Main
+                            Website</a>
                     </li>
-                </ul>
-                <div class="ms-auto">
-                    @auth
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                    <div class="ms-auto">
+                        @auth
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
                                 </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                        @else
-                        <a href="/login" class="btn btn-light" type="submit">Admin Login</a>
-                    @endauth
-                </div>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
 
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                    </ul>
+                @else
+                    <a href="/login" class="btn btn-light" type="submit">Admin Login</a>
+                @endauth
             </div>
+
+        </div>
         </div>
     </nav>
     <div class="container mt-5">
@@ -77,11 +82,13 @@
                     <span>of data with</span> <span class="text-success">AnalyGram</span>
                 </h1>
                 <p>
-                    Your go-to Instagram analytics tool for powerful insights. AnalyGram helps you understand your audience, optimize content, and boost engagement for a standout online presence.
+                    Your go-to Instagram analytics tool for powerful insights. AnalyGram helps you understand your
+                    audience, optimize content, and boost engagement for a standout online presence.
                 </p>
             </div>
             <div class="col-lg-6">
-                <img src="https://img.freepik.com/vecteurs-libre/illustration-concept-analyse-ludique_114360-7045.jpg?t=st=1706050301~exp=1706050901~hmac=41f83ab8b9da339e03745c32dea87af2dc6fab1a37af39de40e45289c5e6a981" alt="banner" class="img-fluid">
+                <img src="https://img.freepik.com/vecteurs-libre/illustration-concept-analyse-ludique_114360-7045.jpg?t=st=1706050301~exp=1706050901~hmac=41f83ab8b9da339e03745c32dea87af2dc6fab1a37af39de40e45289c5e6a981"
+                    alt="banner" class="img-fluid">
             </div>
         </div>
     </div>
@@ -92,7 +99,8 @@
         <h2 class="text-success text-center mb-5" style="margin: 8rem auto">Features</h2>
         <div class="row align-items-center justify-items-between mb-5">
             <div class="col-lg-6 mb-4">
-                <img src="https://analygram-6d0a5.web.app/static/media/hero-screenshot-2.050139480ff5b49b4fba.png" class="img-fluid" alt="">
+                <img src="https://analygram-6d0a5.web.app/static/media/hero-screenshot-2.050139480ff5b49b4fba.png"
+                    class="img-fluid" alt="">
             </div>
             <div class="col-md-6 mb-4">
                 <h3>Real-Time Analytics</h3>
@@ -103,15 +111,18 @@
         <div class="row align-items-center justify-items-between mb-5">
             <div class="col-md-6 mb-4">
                 <h3>Engagement Metrics</h3>
-                <p>Track engagement metrics such as likes, comments, shares, and more to understand your audience better.</p>
+                <p>Track engagement metrics such as likes, comments, shares, and more to understand your audience
+                    better.</p>
             </div>
             <div class="col-lg-6 mb-4">
-                <img src="https://analygram-6d0a5.web.app/static/media/afordable.acf6adf8f08567e4c1537edb71b75dd2.svg" class="img-fluid" alt="">
+                <img src="https://analygram-6d0a5.web.app/static/media/afordable.acf6adf8f08567e4c1537edb71b75dd2.svg"
+                    class="img-fluid" alt="">
             </div>
         </div>
         <div class="row align-items-center justify-items-between mb-5">
             <div class="col-lg-6 mb-4">
-                <img src="https://analygram-6d0a5.web.app/static/media/8582996.5eec9d435ce8f34dc72f.jpg" class="img-fluid" alt="">
+                <img src="https://analygram-6d0a5.web.app/static/media/8582996.5eec9d435ce8f34dc72f.jpg"
+                    class="img-fluid" alt="">
             </div>
             <div class="col-md-6 mb-4">
                 <h3>Content Optimization</h3>
@@ -127,22 +138,26 @@
             <div class="col-md-6 mb-4">
                 <div class="card">
                     <div class="card-img-header">
-                        <img src="https://analygram-6d0a5.web.app/static/media/10197785.1b4f71d29a46003bf5de.jpg" class="img-fluid" alt="">
+                        <img src="https://analygram-6d0a5.web.app/static/media/10197785.1b4f71d29a46003bf5de.jpg"
+                            class="img-fluid" alt="">
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Create an Account</h3>
-                        <p class="card-text">Sign up for AnalyGram and connect your Instagram account to get started.</p>
+                        <p class="card-text">Sign up for AnalyGram and connect your Instagram account to get started.
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
                 <div class="card">
                     <div class="card-img-header">
-                        <img src="https://analygram-6d0a5.web.app/static/media/afordable.acf6adf8f08567e4c1537edb71b75dd2.svg" class="img-fluid" alt="">
+                        <img src="https://analygram-6d0a5.web.app/static/media/afordable.acf6adf8f08567e4c1537edb71b75dd2.svg"
+                            class="img-fluid" alt="">
                     </div>
                     <div class="card-body">
                         <h3 class="card-title">Explore Insights</h3>
-                        <p class="card-text">Access detailed analytics and insights to understand your audience and content performance.</p>
+                        <p class="card-text">Access detailed analytics and insights to understand your audience and
+                            content performance.</p>
                     </div>
                 </div>
             </div>
