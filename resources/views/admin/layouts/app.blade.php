@@ -144,13 +144,13 @@
             <h3 class="sidebar-logo"><a href="/" class="text-decoration-none text-white">Analygram</a></h3>
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link active
+                    <a class="nav-link {{ \Illuminate\Support\Facades\Route::is('dashboard') ? 'active' : '' }}"
                     " href="#">
                         <i class="bi bi-speedometer2"></i> Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('user.index') }}">
+                    <a class="nav-link {{ \Illuminate\Support\Facades\Route::is('user.index') ? 'active' : '' }}"" href="{{ route('user.index') }}">
                         <i class="bi
                         bi-person"></i> Users
                     </a>

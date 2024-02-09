@@ -8,6 +8,6 @@ Route::middleware('auth')->group(function () {
     Route::get('dashboard', function () {
         $users = User::all();
         return view('admin.index', compact('users'));
-    });
+    })->name('dashboard');
     Route::resource('user', UserController::class)->except(['create', 'store', 'edit', 'update'])->withTrashed();
 });
