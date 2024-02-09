@@ -9,5 +9,6 @@ Route::middleware('auth')->group(function () {
         $users = User::all();
         return view('admin.index', compact('users'));
     })->name('dashboard');
+    Route::get('suspended', [UserController::class, 'allTrashed'])->name('user.trash');
     Route::resource('user', UserController::class)->except(['create', 'store', 'edit', 'update'])->withTrashed();
 });

@@ -68,7 +68,7 @@ class UserController extends Controller
     public function allTrashed()
     {
         $users = User::onlyTrashed()->get();
-        return view();
+        return view('admin.user.trashed');
     }
 
     public function restore(User $user)

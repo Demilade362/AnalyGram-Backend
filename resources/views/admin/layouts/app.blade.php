@@ -117,17 +117,23 @@
             <div class="offcanvas-body">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active
-                    " href="#">
-                            <i class="bi bi-speedometer2"></i> Dashboard
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="user.index">
-                            <i class="bi
+                    <a class="nav-link {{ \Illuminate\Support\Facades\Route::is('dashboard') ? 'active' : '' }}"
+                    " href="{{ route("dashboard") }}">
+                        <i class="bi bi-speedometer2"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ \Illuminate\Support\Facades\Route::is('user.index') ? 'active' : '' }}"" href="{{ route('user.index') }}">
+                        <i class="bi
                         bi-person"></i> Users
-                        </a>
-                    </li>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ \Illuminate\Support\Facades\Route::is('user.trash') ? 'active' : '' }}"" href="{{ route('user.trash') }}">
+                        <i class="bi
+                        bi-person-fill"></i> Suspended Users
+                    </a>
+                </li>
                 </ul>
                 <div class="p-2 mt-5">
                     <form id="logout-form" action="#" method="POST">
@@ -153,6 +159,12 @@
                     <a class="nav-link {{ \Illuminate\Support\Facades\Route::is('user.index') ? 'active' : '' }}"" href="{{ route('user.index') }}">
                         <i class="bi
                         bi-person"></i> Users
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ \Illuminate\Support\Facades\Route::is('user.trash') ? 'active' : '' }}"" href="{{ route('user.trash') }}">
+                        <i class="bi
+                        bi-person-fill"></i> Suspended Users
                     </a>
                 </li>
             </ul>
