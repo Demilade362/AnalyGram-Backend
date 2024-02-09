@@ -150,7 +150,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="user.index">
+                    <a class="nav-link" href="{{ route('user.index') }}">
                         <i class="bi
                         bi-person"></i> Users
                     </a>
