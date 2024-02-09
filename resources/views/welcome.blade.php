@@ -50,7 +50,7 @@
                 @auth
                     <div class="ms-auto">
                         <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown active">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
