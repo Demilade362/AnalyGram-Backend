@@ -171,7 +171,7 @@
                     <a href="#" class="btn btn-success rounded-circle shadow-sm">
                         <i class="bi bi-person-fill"></i>
                     </a>
-                    <form id="logout-form" action="#" method="POST>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST>
                         @csrf
                         <button type=" submit" class="btn btn-danger ms-2 rounded-circle shadow-sm">
                         <i class="bi bi-box-arrow-right"></i>
