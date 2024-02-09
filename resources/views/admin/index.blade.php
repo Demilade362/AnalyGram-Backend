@@ -10,7 +10,7 @@
                 <p class="card-text text-sm">
                     Check All the users registered on your site
                 </p>
-                <a href="/admin/orders" class="btn btn-success">View Users
+                <a href="{{ route('user.index') }}" class="btn btn-success">View Users
                     <i class="bi bi-person"></i>
                 </a>
             </div>
@@ -21,7 +21,7 @@
             <div class="card-body">
                 <h3 class="card-title placeholder-glow">Check Main Website</h3>
                 <p class="card-text placeholder-glow">Check Main website to enusre smooth running</p>
-                <a href="/admin/products" class="btn btn-success">Check website
+                <a href="https://analygram-6d0a5.web.app/" class="btn btn-success">Check website
                     <i class="bi bi-eye"></i>
                 </a>
             </div>
