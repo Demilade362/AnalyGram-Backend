@@ -47,14 +47,6 @@
                                 <tr class="">
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
-                                    <td align="end">
-                                        <div class="d-flex-justify-content-between">
-                                            <a href="/admin/customers" class="btn btn-danger btn-sm">
-                                                <i class="bi bi-trash"></i>
-                                                Suspend Account
-                                            </a>
-                                        </div>
-                                    </td>
                                 </tr>
                        @endforeach
                     </tbody>
