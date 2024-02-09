@@ -4,6 +4,11 @@
 <div class="row mt-4">
     <div class="col-md-12">
         <div class="card border-0">
+        @session('msg')
+            <div class="alert alert-success" role="alert">
+                 {{ $value }}
+            </div>
+        @endsession
             <div class="card-body">
                 <table class="table">
                     <thead>

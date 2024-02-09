@@ -4,6 +4,11 @@
 <div class="row mt-4">
     <div class="col-md-12">
         <div class="card border-0">
+         @session('msg')
+            <div class="alert alert-success" role="alert">
+                 {{ $value }}
+            </div>
+        @endsession
             <div class="card-body">
                 <table class="table">
                     <thead>
@@ -20,12 +25,12 @@
                             <td>{{ $user->email }}</td>
                             <td align="end">
                                 <div class="d-flex-justify-content-between">
-                                    <form action="{{ route('user.destroy', $user->id) }}" method="POST">
+                                    <form action="{{ route('user.restore', $user->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-danger btn-sm">
-                                        <i class="bi bi-trash"></i>
-                                        Suspend Account
+                                    <button class="btn btn-success btn-sm">
+                                        <i class="bi bi-person"></i>
+                                        Restore Account
                                         </button>
                                 </div>
                             </td>
