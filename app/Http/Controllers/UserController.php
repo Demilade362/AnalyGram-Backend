@@ -73,12 +73,17 @@ class UserController extends Controller
 
     public function restore(User $user)
     {
-        $user->restore();
-        return redirect()->back()->with('msg', "User Account has be restored");
+        if ($user->trashed()) {
+            $user->restore();
+            return redirect()->back()->with('msg', "User Account has be restored");
+        }
     }
 
-    public function trashed(User $user){
+    public function trashed(User $user)
+    {
+      if($user->trashed()){
         $user->forceDelete();
         return redirect()->back()->with('msg', 'User Account has been permanently Deleted');
+      }
     }
 }
