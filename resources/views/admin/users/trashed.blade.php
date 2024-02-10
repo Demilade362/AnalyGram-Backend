@@ -27,7 +27,6 @@
                                 <div class="d-flex-justify-content-between">
                                     <form action="{{ route('user.restore', $user->id) }}" method="POST">
                                     @csrf
-                                    @method('DELETE')
                                     <button class="btn btn-success btn-sm">
                                         <i class="bi bi-person"></i>
                                         Restore Account
