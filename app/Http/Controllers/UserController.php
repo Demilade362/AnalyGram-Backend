@@ -71,19 +71,27 @@ class UserController extends Controller
         return view('admin.users.trashed', compact('users'));
     }
 
-    public function restore(User $user)
+    public function restore($id)
     {
+        $user = User::findorFail($id);
+
         if ($user->trashed()) {
             $user->restore();
+            return redirect()->back()->with('msg', "User Account has be restored");
         }
-        return redirect()->back()->with('msg', "User Account has be restored");
+
+        return redirect()->back();
     }
 
-    public function trashed(User $user)
+    public function trashed($id)
     {
-      if($user->trashed()){
-        $user->forceDelete();
-    }
-    return redirect()->back()->with('msg', 'User Account has been permanently Deleted');
+
+        $user = User::findorFail($id);
+        if ($user->trashed()) {
+            $user->forceDelete();
+            return redirect()->back()->with('msg', 'User Account has been permanently Deleted');
+        }
+
+        return redirect()->back();
     }
 }
