@@ -10,6 +10,6 @@ Route::middleware('auth')->group(function () {
         return view('admin.index', compact('users'));
     })->name('dashboard');
     Route::get('suspended', [UserController::class, 'allTrashed'])->name('user.trash')->withTrashed();
-    Route::post("/restore", [UserController::class, "restore"])->name('user.restore')->withTrashed();
+    Route::post("/restore/{id}", [UserController::class, "restore"])->name('user.restore')->withTrashed();
     Route::resource('user', UserController::class)->except(['create', 'store', 'edit', 'update'])->withTrashed();
 });
