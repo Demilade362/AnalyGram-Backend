@@ -73,7 +73,7 @@ class UserController extends Controller
 
     public function restore($id)
     {
-        $user = User::findorFail($id);
+        $user = User::where('id',$id)->first();
 
         if ($user->trashed()) {
             $user->restore();
@@ -86,7 +86,7 @@ class UserController extends Controller
     public function trashed($id)
     {
 
-        $user = User::findorFail($id);
+        $user = User::where('id', $id)->first();
         if ($user->trashed()) {
             $user->forceDelete();
             return redirect()->back()->with('msg', 'User Account has been permanently Deleted');
