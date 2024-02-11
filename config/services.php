@@ -34,7 +34,7 @@ return [
     'google' => [
         'client_id' => "443641814081-uelvjlfm201fm0d98c9blku1jrrbemiq.apps.googleusercontent.com",
         'client_secret' => "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",
-        'redirect' => 'https://analygram-backend.tech/auth/redirect',
+        'redirect' => 'https://analygram-backend.tech/auth/callback',
     ],
 
 ];

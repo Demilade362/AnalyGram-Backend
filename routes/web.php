@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
+use App\Http\Controllers\GoogleAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,8 @@ Route::get('/', function () {
 Route::get('/auth/redirect', function () {
     return Socialite::driver('google')->redirect();
 });
+
+Route::get('/auth/callback', GoogleAuthController::class);
 
 Auth::routes([
     "register" => false,
