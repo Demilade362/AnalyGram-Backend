@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ResetPasswordController;
 use App\Http\Controllers\Api\AuthController as ApiAuthController;
 use App\Http\Controllers\GoogleAuthController;
-use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +20,6 @@ use Laravel\Socialite\Facades\Socialite;
 
 Route::post('/login', [ApiAuthController::class, 'login']);
 Route::post("/register", [ApiAuthController::class, 'register']);
-
-Route::get('/auth/redirect', function () {
-    return Socialite::driver('google')->redirect();
-});
  
 Route::get('/auth/callback', GoogleAuthController::class);
 
