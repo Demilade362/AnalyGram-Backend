@@ -2,9 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\GoogleAuthController;
-use App\Mail\WelcomeMail;
 use App\Models\User;
-use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +16,6 @@ use Illuminate\Support\Facades\Mail;
 */
 
 Route::get('/', function () {
-    Mail::to('ademolademilade362@gmail.com')->send(new WelcomeMail('demilade'));
     return view('welcome');
 });
 
