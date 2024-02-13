@@ -12,6 +12,7 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
+    <link rel="icon" href="https://analygram-6d0a5.web.app/hadderlogo.ico">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <link rel="stylesheet" href="/main.css">
