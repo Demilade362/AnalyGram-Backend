@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['https://analygram-6d0a5.web.app/'],
+    'allowed_origins' => ['*'],
 
     'allowed_origins_patterns' => [],
 
